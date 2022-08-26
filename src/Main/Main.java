@@ -17,6 +17,8 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
+        bg_estado.setSelected(rb_soltero.getModel(), true);
+        bg_sexo.setSelected(rb_masculino.getModel(), true);
     }
 
     /**
@@ -28,9 +30,49 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bg_sexo = new javax.swing.ButtonGroup();
+        bg_estado = new javax.swing.ButtonGroup();
         tp_principal = new javax.swing.JTabbedPane();
         p_crearpersona = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        cb_tipo = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        tf_id = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        rb_masculino = new javax.swing.JRadioButton();
+        rb_femenino = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
+        rb_soltero = new javax.swing.JRadioButton();
+        rb_casado = new javax.swing.JRadioButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        tf_usuario = new javax.swing.JTextField();
+        tf_contra = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        cb_cargo = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        tf_ocupacion = new javax.swing.JTextField();
+        tf_horario = new javax.swing.JTextField();
+        tf_semanas = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        tf_sueldo = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        b_agregarpersona = new javax.swing.JButton();
         p_crearobjeto = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel20 = new javax.swing.JLabel();
+        b_color = new javax.swing.JButton();
         p_modificarpersona = new javax.swing.JPanel();
         p_modificarobjeto = new javax.swing.JPanel();
         p_jpersonas = new javax.swing.JPanel();
@@ -40,28 +82,258 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setText("Ingrese los datos del tipo de persona: ");
+
+        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General", "Gerente" }));
+
+        jLabel2.setText("Tipo de Persona");
+
+        jLabel3.setText("ID: ");
+
+        jLabel4.setText("Nombre: ");
+
+        jLabel5.setText("Edad: ");
+
+        jLabel6.setText("Sexo:");
+
+        bg_sexo.add(rb_masculino);
+        rb_masculino.setText("M");
+
+        bg_sexo.add(rb_femenino);
+        rb_femenino.setText("F");
+
+        jLabel7.setText("Estado Civil:");
+
+        bg_estado.add(rb_soltero);
+        rb_soltero.setText("Soltero/a");
+
+        bg_estado.add(rb_casado);
+        rb_casado.setText("Casado");
+
+        jLabel8.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel8.setText("Gerentes: ");
+
+        jLabel9.setText("Usuario: ");
+
+        jLabel10.setText("Contraseña:");
+
+        jLabel11.setText("Cargo:");
+
+        cb_cargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Gerente de Planta", "Gerente de Sucursal" }));
+
+        jLabel12.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel12.setText("Persona General: ");
+
+        jLabel13.setText("Ocupacion: ");
+
+        jLabel14.setText("Horario:");
+
+        jLabel15.setText("Tiempo de trabajo:");
+
+        jLabel16.setText("semanas");
+
+        jLabel17.setText("Sueldo:");
+
+        tf_sueldo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_sueldoActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setText("Lps.");
+
+        b_agregarpersona.setBackground(new java.awt.Color(204, 0, 0));
+        b_agregarpersona.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        b_agregarpersona.setText("Agregar Persona");
+        b_agregarpersona.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         javax.swing.GroupLayout p_crearpersonaLayout = new javax.swing.GroupLayout(p_crearpersona);
         p_crearpersona.setLayout(p_crearpersonaLayout);
         p_crearpersonaLayout.setHorizontalGroup(
             p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel11))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cb_cargo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tf_contra)
+                                    .addComponent(tf_usuario))))
+                        .addGap(193, 193, 193)
+                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel13))
+                                .addGap(18, 18, 18)
+                                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tf_ocupacion)
+                                    .addComponent(tf_horario, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                        .addComponent(tf_semanas, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(68, 68, 68)
+                                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                        .addComponent(tf_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, p_crearpersonaLayout.createSequentialGroup()
+                                    .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(tf_id)
+                                                .addComponent(tf_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                                                .addComponent(jTextField1)))
+                                        .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                            .addGap(23, 23, 23)
+                                            .addComponent(rb_masculino, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rb_soltero)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rb_femenino, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rb_casado, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                        .addGap(341, 341, 341)
+                        .addComponent(b_agregarpersona)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         p_crearpersonaLayout.setVerticalGroup(
             p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(tf_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(rb_masculino)
+                    .addComponent(rb_femenino))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_soltero)
+                    .addComponent(jLabel7)
+                    .addComponent(rb_casado))
+                .addGap(37, 37, 37)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(tf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addComponent(tf_ocupacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(tf_contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14)
+                            .addComponent(tf_horario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(cb_cargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel15)
+                            .addComponent(tf_semanas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16)))
+                    .addGroup(p_crearpersonaLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tf_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(b_agregarpersona, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
         );
 
         tp_principal.addTab("Crear Persona", p_crearpersona);
+
+        jLabel19.setText("Tipo de Objeto:");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Zapatos", "Ropa", "Hogar" }));
+
+        jLabel20.setText("Color: ");
 
         javax.swing.GroupLayout p_crearobjetoLayout = new javax.swing.GroupLayout(p_crearobjeto);
         p_crearobjeto.setLayout(p_crearobjetoLayout);
         p_crearobjetoLayout.setHorizontalGroup(
             p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGroup(p_crearobjetoLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(b_color, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(775, Short.MAX_VALUE))
         );
         p_crearobjetoLayout.setVerticalGroup(
             p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGroup(p_crearobjetoLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20)
+                    .addComponent(b_color, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(482, Short.MAX_VALUE))
         );
 
         tp_principal.addTab("Crear Objeto", p_crearobjeto);
@@ -70,11 +342,11 @@ public class Main extends javax.swing.JFrame {
         p_modificarpersona.setLayout(p_modificarpersonaLayout);
         p_modificarpersonaLayout.setHorizontalGroup(
             p_modificarpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         p_modificarpersonaLayout.setVerticalGroup(
             p_modificarpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         tp_principal.addTab("Modificar Persona", p_modificarpersona);
@@ -83,11 +355,11 @@ public class Main extends javax.swing.JFrame {
         p_modificarobjeto.setLayout(p_modificarobjetoLayout);
         p_modificarobjetoLayout.setHorizontalGroup(
             p_modificarobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         p_modificarobjetoLayout.setVerticalGroup(
             p_modificarobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         tp_principal.addTab("Modificar Objeto", p_modificarobjeto);
@@ -96,11 +368,11 @@ public class Main extends javax.swing.JFrame {
         p_jpersonas.setLayout(p_jpersonasLayout);
         p_jpersonasLayout.setHorizontalGroup(
             p_jpersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         p_jpersonasLayout.setVerticalGroup(
             p_jpersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         tp_principal.addTab("Jerarquia de Personas", p_jpersonas);
@@ -109,11 +381,11 @@ public class Main extends javax.swing.JFrame {
         p_jobjetos.setLayout(p_jobjetosLayout);
         p_jobjetosLayout.setHorizontalGroup(
             p_jobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         p_jobjetosLayout.setVerticalGroup(
             p_jobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         tp_principal.addTab("Jerarquia de Objetos", p_jobjetos);
@@ -122,11 +394,11 @@ public class Main extends javax.swing.JFrame {
         p_lispersonas.setLayout(p_lispersonasLayout);
         p_lispersonasLayout.setHorizontalGroup(
             p_lispersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         p_lispersonasLayout.setVerticalGroup(
             p_lispersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         tp_principal.addTab("Lista de Personas", p_lispersonas);
@@ -135,11 +407,11 @@ public class Main extends javax.swing.JFrame {
         lis_listaobjetos.setLayout(lis_listaobjetosLayout);
         lis_listaobjetosLayout.setHorizontalGroup(
             lis_listaobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 962, Short.MAX_VALUE)
+            .addGap(0, 974, Short.MAX_VALUE)
         );
         lis_listaobjetosLayout.setVerticalGroup(
             lis_listaobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 554, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         tp_principal.addTab("Lista de Objetos", lis_listaobjetos);
@@ -148,21 +420,19 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tp_principal)
-                .addContainerGap())
+            .addComponent(tp_principal)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tp_principal, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(tp_principal, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tf_sueldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_sueldoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_sueldoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -175,7 +445,7 @@ public class Main extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -200,6 +470,34 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b_agregarpersona;
+    private javax.swing.JButton b_color;
+    private javax.swing.ButtonGroup bg_estado;
+    private javax.swing.ButtonGroup bg_sexo;
+    private javax.swing.JComboBox<String> cb_cargo;
+    private javax.swing.JComboBox<String> cb_tipo;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel lis_listaobjetos;
     private javax.swing.JPanel p_crearobjeto;
     private javax.swing.JPanel p_crearpersona;
@@ -208,6 +506,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel p_lispersonas;
     private javax.swing.JPanel p_modificarobjeto;
     private javax.swing.JPanel p_modificarpersona;
+    private javax.swing.JRadioButton rb_casado;
+    private javax.swing.JRadioButton rb_femenino;
+    private javax.swing.JRadioButton rb_masculino;
+    private javax.swing.JRadioButton rb_soltero;
+    private javax.swing.JTextField tf_contra;
+    private javax.swing.JTextField tf_horario;
+    private javax.swing.JTextField tf_id;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_ocupacion;
+    private javax.swing.JTextField tf_semanas;
+    private javax.swing.JTextField tf_sueldo;
+    private javax.swing.JTextField tf_usuario;
     private javax.swing.JTabbedPane tp_principal;
     // End of variables declaration//GEN-END:variables
 }
