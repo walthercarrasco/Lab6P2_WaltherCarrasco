@@ -16,6 +16,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,17 +28,137 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tp_principal = new javax.swing.JTabbedPane();
+        p_crearpersona = new javax.swing.JPanel();
+        p_crearobjeto = new javax.swing.JPanel();
+        p_modificarpersona = new javax.swing.JPanel();
+        p_modificarobjeto = new javax.swing.JPanel();
+        p_jpersonas = new javax.swing.JPanel();
+        p_jobjetos = new javax.swing.JPanel();
+        p_lispersonas = new javax.swing.JPanel();
+        lis_listaobjetos = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout p_crearpersonaLayout = new javax.swing.GroupLayout(p_crearpersona);
+        p_crearpersona.setLayout(p_crearpersonaLayout);
+        p_crearpersonaLayout.setHorizontalGroup(
+            p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_crearpersonaLayout.setVerticalGroup(
+            p_crearpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Crear Persona", p_crearpersona);
+
+        javax.swing.GroupLayout p_crearobjetoLayout = new javax.swing.GroupLayout(p_crearobjeto);
+        p_crearobjeto.setLayout(p_crearobjetoLayout);
+        p_crearobjetoLayout.setHorizontalGroup(
+            p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_crearobjetoLayout.setVerticalGroup(
+            p_crearobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Crear Objeto", p_crearobjeto);
+
+        javax.swing.GroupLayout p_modificarpersonaLayout = new javax.swing.GroupLayout(p_modificarpersona);
+        p_modificarpersona.setLayout(p_modificarpersonaLayout);
+        p_modificarpersonaLayout.setHorizontalGroup(
+            p_modificarpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_modificarpersonaLayout.setVerticalGroup(
+            p_modificarpersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Modificar Persona", p_modificarpersona);
+
+        javax.swing.GroupLayout p_modificarobjetoLayout = new javax.swing.GroupLayout(p_modificarobjeto);
+        p_modificarobjeto.setLayout(p_modificarobjetoLayout);
+        p_modificarobjetoLayout.setHorizontalGroup(
+            p_modificarobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_modificarobjetoLayout.setVerticalGroup(
+            p_modificarobjetoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Modificar Objeto", p_modificarobjeto);
+
+        javax.swing.GroupLayout p_jpersonasLayout = new javax.swing.GroupLayout(p_jpersonas);
+        p_jpersonas.setLayout(p_jpersonasLayout);
+        p_jpersonasLayout.setHorizontalGroup(
+            p_jpersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_jpersonasLayout.setVerticalGroup(
+            p_jpersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Jerarquia de Personas", p_jpersonas);
+
+        javax.swing.GroupLayout p_jobjetosLayout = new javax.swing.GroupLayout(p_jobjetos);
+        p_jobjetos.setLayout(p_jobjetosLayout);
+        p_jobjetosLayout.setHorizontalGroup(
+            p_jobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_jobjetosLayout.setVerticalGroup(
+            p_jobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Jerarquia de Objetos", p_jobjetos);
+
+        javax.swing.GroupLayout p_lispersonasLayout = new javax.swing.GroupLayout(p_lispersonas);
+        p_lispersonas.setLayout(p_lispersonasLayout);
+        p_lispersonasLayout.setHorizontalGroup(
+            p_lispersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        p_lispersonasLayout.setVerticalGroup(
+            p_lispersonasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Lista de Personas", p_lispersonas);
+
+        javax.swing.GroupLayout lis_listaobjetosLayout = new javax.swing.GroupLayout(lis_listaobjetos);
+        lis_listaobjetos.setLayout(lis_listaobjetosLayout);
+        lis_listaobjetosLayout.setHorizontalGroup(
+            lis_listaobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 962, Short.MAX_VALUE)
+        );
+        lis_listaobjetosLayout.setVerticalGroup(
+            lis_listaobjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 554, Short.MAX_VALUE)
+        );
+
+        tp_principal.addTab("Lista de Objetos", lis_listaobjetos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tp_principal)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tp_principal, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -54,7 +175,7 @@ public class Main extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -79,5 +200,14 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel lis_listaobjetos;
+    private javax.swing.JPanel p_crearobjeto;
+    private javax.swing.JPanel p_crearpersona;
+    private javax.swing.JPanel p_jobjetos;
+    private javax.swing.JPanel p_jpersonas;
+    private javax.swing.JPanel p_lispersonas;
+    private javax.swing.JPanel p_modificarobjeto;
+    private javax.swing.JPanel p_modificarpersona;
+    private javax.swing.JTabbedPane tp_principal;
     // End of variables declaration//GEN-END:variables
 }
