@@ -1572,21 +1572,20 @@ public class Main extends javax.swing.JFrame {
         }else{
             objetos.add(new Hogar(ta_descripcionhogar.getText(),ta_instrucciones.getText(), Integer.parseInt(cb_garantia.getSelectedItem().toString()), b_color.getBackground(), ta_descripcion.getText(), tf_marca.getText(), Integer.parseInt(tf_tama.getText()), tf_calidad.getText(), (Persona)cb_persona.getSelectedItem()));
         }
+        
         JOptionPane.showMessageDialog(this, "Objeto Agregado");
-        
-        
         for (Objetos objeto : objetos) {
-            DefaultMutableTreeNode n = new DefaultMutableTreeNode(objeto.toString());
-            DefaultTreeModel m = (DefaultTreeModel) jt_personas.getModel();
-            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();            
+            DefaultMutableTreeNode n2 = new DefaultMutableTreeNode(objeto.toString());
+            DefaultTreeModel modelo = (DefaultTreeModel) jt_objetos.getModel();
+            DefaultMutableTreeNode raiz2 = (DefaultMutableTreeNode) modelo.getRoot();            
             if(objeto instanceof Zapatos){
-                ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(n);
+                ((DefaultMutableTreeNode) raiz2.getChildAt(0)).add(n2);
             }else if(objeto instanceof Ropa){
-                ((DefaultMutableTreeNode) raiz.getChildAt(1)).add(n);
+                ((DefaultMutableTreeNode) raiz2.getChildAt(1)).add(n2);
             }else{
-                ((DefaultMutableTreeNode) raiz.getChildAt(2)).add(n);
+                ((DefaultMutableTreeNode) raiz2.getChildAt(2)).add(n2);
             }
-            m.reload();
+            modelo.reload();
         }
     }//GEN-LAST:event_b_agregarobjetoMouseClicked
 
