@@ -1496,10 +1496,34 @@ public class Main extends javax.swing.JFrame {
             personas.add(per);
             cb_persona.removeAllItems();
             DefaultComboBoxModel model = (DefaultComboBoxModel) cb_persona.getModel();
+            
+            
             for (Persona persona : personas) {
                 model.addElement(persona);
             }
             cb_persona.setModel(model);
+            
+            
+            DefaultTreeModel m = (DefaultTreeModel) jt_personas.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
+            
+            
+            for (Persona persona : personas) {
+                if(persona instanceof General){
+                    //DefaultMutableTreeNode pers = new DefaultMutableTreeNode("General");
+                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(persona.getNombre());
+                    ((DefaultMutableTreeNode) raiz.getChildAt(1)).add(n);
+                }else{
+                    if(((Gerente)persona).getCargo().equals("Gerente de Planta")){
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(persona.getNombre());
+                        ((DefaultMutableTreeNode)((DefaultMutableTreeNode) raiz.getChildAt(0)).getChildAt(0)).add(n);
+                    }else{
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(persona.getNombre());
+                        ((DefaultMutableTreeNode)((DefaultMutableTreeNode) raiz.getChildAt(0)).getChildAt(1)).add(n);                        
+                    }
+                }
+            }
+            m.reload();
         }else{
             JOptionPane.showMessageDialog(this, "Hubo un Error al agregar");
         }
@@ -1509,10 +1533,11 @@ public class Main extends javax.swing.JFrame {
     private void tp_principalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tp_principalStateChanged
         if(tp_principal.getSelectedIndex() == 4){
             DefaultTreeModel m = (DefaultTreeModel) jt_personas.getModel();
-            
             for (Persona persona : personas) {
                 if(persona instanceof General){
-                    
+                    DefaultMutableTreeNode pers = new DefaultMutableTreeNode("General");
+                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(persona.getNombre());
+                    pers.add(n);
                 }else{
                     
                 }
