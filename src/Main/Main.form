@@ -544,17 +544,19 @@
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel20" min="-2" pref="48" max="-2" attributes="0"/>
-                                              <Component id="jLabel21" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel22" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel23" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel21" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel78" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="b_color" min="-2" pref="57" max="-2" attributes="0"/>
-                                              <Component id="jComboBox1" min="-2" pref="89" max="-2" attributes="0"/>
+                                              <Component id="cb_objetos" min="-2" pref="89" max="-2" attributes="0"/>
                                               <Component id="jScrollPane1" max="32767" attributes="0"/>
                                               <Component id="tf_marca" alignment="0" max="32767" attributes="0"/>
                                               <Component id="tf_calidad" max="32767" attributes="0"/>
+                                              <Component id="tf_tama" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -653,19 +655,29 @@
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cb_objetos" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                           <Component id="b_color" min="-2" pref="25" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel78" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tf_tama" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tf_marca" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -742,7 +754,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
                       <Component id="b_agregarobjeto" min="-2" pref="39" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
@@ -755,7 +767,7 @@
                 <Property name="text" type="java.lang.String" value="Tipo de Objeto:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="cb_objetos">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
@@ -765,6 +777,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cb_objetosItemStateChanged"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -855,7 +870,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea2">
+                <Component class="javax.swing.JTextArea" name="ta_suela">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
@@ -1014,6 +1029,16 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar Objeto"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="b_agregarobjetoMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel78">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tama&#xf1;o:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="tf_tama">
             </Component>
           </SubComponents>
         </Container>
