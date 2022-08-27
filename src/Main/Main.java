@@ -32,6 +32,17 @@ public class Main extends javax.swing.JFrame {
         tf_usuario.setEnabled(false);
         tf_contra.setEnabled(false);
         cb_cargo.setEnabled(false);
+            
+            rb_m.setEnabled(false);
+            rb_s.setEnabled(false);
+            rb_l.setEnabled(false);
+            rb_xl.setEnabled(false);
+            tf_tela.setEnabled(false);
+            tf_pais.setEnabled(false);
+            
+            ta_instrucciones.setEnabled(false);
+            ta_descripcionhogar.setEnabled(false);
+            cb_garantia.setEnabled(false);        
     }
 
     /**
@@ -1279,6 +1290,15 @@ public class Main extends javax.swing.JFrame {
 
         tp_principal.addTab("Jerarquia de Personas", p_jpersonas);
 
+        treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Objetos");
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Zapatos");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Ropa");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Hogar");
+        treeNode1.add(treeNode2);
+        jt_objetos.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_objetos.setToolTipText("");
         jScrollPane12.setViewportView(jt_objetos);
 
         javax.swing.GroupLayout p_jobjetosLayout = new javax.swing.GroupLayout(p_jobjetos);
@@ -1506,11 +1526,8 @@ public class Main extends javax.swing.JFrame {
             
             DefaultTreeModel m = (DefaultTreeModel) jt_personas.getModel();
             DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();
-            
-            
             for (Persona persona : personas) {
                 if(persona instanceof General){
-                    //DefaultMutableTreeNode pers = new DefaultMutableTreeNode("General");
                     DefaultMutableTreeNode n = new DefaultMutableTreeNode(persona.getNombre());
                     ((DefaultMutableTreeNode) raiz.getChildAt(1)).add(n);
                 }else{
@@ -1542,7 +1559,6 @@ public class Main extends javax.swing.JFrame {
                     
                 }
             }
-            
             m.reload();
 
         }
@@ -1556,10 +1572,71 @@ public class Main extends javax.swing.JFrame {
         }else{
             objetos.add(new Hogar(ta_descripcionhogar.getText(),ta_instrucciones.getText(), Integer.parseInt(cb_garantia.getSelectedItem().toString()), b_color.getBackground(), ta_descripcion.getText(), tf_marca.getText(), Integer.parseInt(tf_tama.getText()), tf_calidad.getText(), (Persona)cb_persona.getSelectedItem()));
         }
+        JOptionPane.showMessageDialog(this, "Objeto Agregado");
+        
+        
+        for (Objetos objeto : objetos) {
+            DefaultMutableTreeNode n = new DefaultMutableTreeNode(objeto.toString());
+            DefaultTreeModel m = (DefaultTreeModel) jt_personas.getModel();
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) m.getRoot();            
+            if(objeto instanceof Zapatos){
+                ((DefaultMutableTreeNode) raiz.getChildAt(0)).add(n);
+            }else if(objeto instanceof Ropa){
+                ((DefaultMutableTreeNode) raiz.getChildAt(1)).add(n);
+            }else{
+                ((DefaultMutableTreeNode) raiz.getChildAt(2)).add(n);
+            }
+            m.reload();
+        }
     }//GEN-LAST:event_b_agregarobjetoMouseClicked
 
     private void cb_objetosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_objetosItemStateChanged
-        
+        if(cb_objetos.getSelectedIndex() == 0){
+            tf_talla.setEnabled(true);
+            ta_suela.setEnabled(true);
+            spin_comodidad.setEnabled(true);
+            
+            rb_m.setEnabled(false);
+            rb_s.setEnabled(false);
+            rb_l.setEnabled(false);
+            rb_xl.setEnabled(false);
+            tf_tela.setEnabled(false);
+            tf_pais.setEnabled(false);
+            
+            ta_instrucciones.setEnabled(false);
+            ta_descripcionhogar.setEnabled(false);
+            cb_garantia.setEnabled(false);
+        }else if(cb_objetos.getSelectedIndex() == 1){
+            tf_talla.setEnabled(false);
+            ta_suela.setEnabled(false);
+            spin_comodidad.setEnabled(false);
+            
+            rb_m.setEnabled(true);
+            rb_s.setEnabled(true);
+            rb_l.setEnabled(true);
+            rb_xl.setEnabled(true);
+            tf_tela.setEnabled(true);
+            tf_pais.setEnabled(true);
+            
+            ta_instrucciones.setEnabled(false);
+            ta_descripcionhogar.setEnabled(false);
+            cb_garantia.setEnabled(false);            
+        }else{
+             tf_talla.setEnabled(false);
+            ta_suela.setEnabled(false);
+            spin_comodidad.setEnabled(false);       
+            
+            rb_m.setEnabled(false);
+            rb_s.setEnabled(false);
+            rb_l.setEnabled(false);
+            rb_xl.setEnabled(false);
+            tf_tela.setEnabled(false);
+            tf_pais.setEnabled(false);
+
+            ta_instrucciones.setEnabled(true);
+            ta_descripcionhogar.setEnabled(true);
+            cb_garantia.setEnabled(true);             
+        }
     }//GEN-LAST:event_cb_objetosItemStateChanged
 
     /**

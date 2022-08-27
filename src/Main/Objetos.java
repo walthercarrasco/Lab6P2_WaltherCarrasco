@@ -71,6 +71,11 @@ public class Objetos {
     public void setPersona(Persona persona) {
         this.persona = persona;
     }
+
+    @Override
+    public String toString() {
+        return "Objetos{" + "color=" + color + ", descripcion=" + descripcion + ", marca=" + marca + ", tamano=" + tamano + ", calidad=" + calidad + ", persona=" + persona + '}';
+    }
     
     
 
